@@ -25,7 +25,7 @@ export default function App() {
     <>
       {/* HERO */}
       <section className="hero">
-        <h1>Khushboo Chauhan </h1>
+        <h1>Khushbu Chauhan </h1>
         <p>We're building the future. Be the first to know when we launch.</p>
        
 

@@ -12,7 +12,7 @@ export default function About() {
       <div className="container">
         <div className="about-content">
           <h2 className="section-title">
-            About <span className="gold-text">Khushbu Chauhan</span>
+            Introduction <span className="gold-text">Khushbu Chauhan</span>
           </h2>
 
           <div className="about-text">

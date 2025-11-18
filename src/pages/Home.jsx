@@ -2,10 +2,14 @@
 import '../styles/global.css';
 import '../styles/home.css';
 import heroBg from '../assets/hero.avif'; // ← Works with .avif, .jpg, .webp, .png
-
+import About from '../pages/About';
+import Services from './Services';
+import Vission from './Vission';
+import Welcome from './Welcome';
 export default function Home() {
   return (
-    <section
+    <>
+        <section
       className="hero"
       style={{
         backgroundImage: `
@@ -47,5 +51,13 @@ export default function Home() {
         </p>
       </div>
     </section>
+    <About/>
+    <Welcome/>
+    <Services/>
+    <Vission/>
+    
+    
+    </>
+
   );
 }

@@ -1,0 +1,16 @@
+src/
+│ App.jsx
+│ index.css
+│ main.jsx
+│
+├── pages/
+│   ├── Home.jsx
+│   ├── About.jsx
+│   ├── Welcome.jsx
+│   ├── Portfolio.jsx
+│   ├── Services.jsx
+│   ├── Vision.jsx
+│   ├── Contact.jsx
+│
+└── components/
+    ├── Navbar.jsx

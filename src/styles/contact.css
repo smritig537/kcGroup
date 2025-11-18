@@ -1,0 +1,18 @@
+.contact-form {
+  max-width:600px; margin:0 auto;
+}
+.contact-form input,
+.contact-form textarea {
+  width:100%; padding:1.3rem; margin-bottom:1.5rem;
+  border:1px solid #ccc; font-family:inherit; font-size:1rem;
+  transition:border 0.3s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline:none; border-color:#000;
+}
+.contact-form button {
+  background:#000; color:#fff; padding:1.3rem 3.5rem;
+  border:none; cursor:pointer; font-size:1.1rem; transition:0.3s;
+}
+.contact-form button:hover { background:#333; }

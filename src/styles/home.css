@@ -1,0 +1,6 @@
+.hero {
+  min-height:100vh; display:flex; align-items:center; justify-content:center;
+  text-align:center; padding-top:120px; background:#fff;
+}
+.hero h1 { font-size:6.8rem; line-height:1; margin-bottom:1rem; }
+.hero p { font-size:1.5rem; color:#444; max-width:900px; margin:2rem auto; }

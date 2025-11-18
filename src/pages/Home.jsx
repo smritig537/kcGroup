@@ -1,29 +1,48 @@
 // src/pages/Home.jsx
 import '../styles/global.css';
 import '../styles/home.css';
+import heroBg from '../assets/hero.avif'; // ← Works with .avif, .jpg, .webp, .png
 
 export default function Home() {
   return (
-    <section className="hero">
-      <div className="container">
-        <h1 style={{fontSize:'7.5rem', marginBottom:'1rem', background:'linear-gradient(to right, #ffd700, #ffed4e)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent'}}>
-          Khushbu Chauhan
-        </h1>
-        
-        <p style={{fontSize:'1.7rem', color:'#f7d35aff', letterSpacing:'2px', marginBottom:'2rem', textTransform:'uppercase'}}>
-          Luxury Brand Consultant • Creative Director
+    <section
+      className="hero"
+      style={{
+        backgroundImage: `
+          linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0.6)),
+          url(${heroBg})
+        `,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed', // Remove on mobile if performance issue
+      }}
+    >
+      {/* Golden glow overlay */}
+      <div className="hero-glow" />
+
+      <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+        <h1>Khushbu Chauhan</h1>
+
+        <p className="tagline">
+          "My work. My voice. My story"
         </p>
 
-        <p style={{fontSize:'1.9rem', maxWidth:'900px', margin:'0 auto 4rem', color:'#ddd', lineHeight:'1.7', fontFamily:'Libre Baskerville'}}>
-          Crafting timeless identities for visionary brands, luxury hotels, and exceptional individuals.
+        <p className="description" style={{}}>
+          Crafting timeless identities for visionary brands, luxury hotels,
+          and exceptional individuals.
         </p>
 
-        <div style={{margin:'4rem 0'}}>
-          <a href="/portfolio" className="btn btn-primary">View Portfolio</a>
-          <a href="/contact" className="btn btn-outline" style={{marginLeft:'1.5rem'}}>Begin Your Journey</a>
+        <div className="hero-buttons">
+          <a href="/portfolio" className="btn btn-primary">
+            View Portfolio
+          </a>
+          <a href="/contact" className="btn btn-primary">
+            Begin Your Journey
+          </a>
         </div>
 
-        <p style={{color:'#aaa', fontStyle:'italic'}}>
+        <p className="trusted">
           Trusted by Taj Hotels • Fashion Houses • Global Leaders
         </p>
       </div>

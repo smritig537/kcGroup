@@ -1,5 +1,126 @@
-.about-content {
-  max-width:800px; margin:0 auto; text-align:center;
-  font-size:1.25rem; line-height:2;
+/* src/styles/about.css */
+.about-section {
+  min-height: 100vh;
+  padding: 140px 0 100px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-image: url('../assets/image.avif'); /* ← Fallback if JS fails */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #ffffff;
+  text-align: center;
 }
-.about-content p + p { margin-top:2rem; }
+
+/* Background image from React import (overrides CSS) */
+.about-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  background-image: var(--bg-image); /* Set via inline style */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -2;
+}
+
+/* Dark elegant overlay */
+.about-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, 
+    rgba(0, 0, 0, 0.8) 0%, 
+    rgba(0, 0, 0, 0.65) 50%, 
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  z-index: -1;
+}
+
+/* Golden accent overlay (subtle luxury glow) */
+.about-bg-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 70%, 
+    rgba(255, 215, 0, 0.12) 0%, 
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+.section-title {
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  line-height: 1.1;
+}
+
+.gold-text {
+  background: linear-gradient(90deg, #ffd700, #fff8b8, #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about-text {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  font-size: 1.4rem;
+  line-height: 1.9;
+  font-family: 'Libre Baskerville', Georgia, serif;
+}
+
+.about-text p {
+  margin-bottom: 1.8rem;
+  opacity: 0.95;
+}
+
+.about-text strong {
+  color: #ffd700;
+  font-weight: 600;
+}
+
+.quote {
+  font-size: 1.6rem;
+  font-style: italic;
+  color: #ffd700 !important;
+  opacity: 1;
+  margin: 3rem auto !important;
+  max-width: 800px;
+}
+
+.about-signature {
+  margin-top: 4rem;
+}
+
+.about-signature span {
+  font-size: 1.8rem;
+  font-family: 'Dancing Script', cursive;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.golden-line {
+  height: 3px;
+  width: 180px;
+  background: linear-gradient(to right, transparent, #ffd700, transparent);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 120px 1rem;
+    background-attachment: scroll;
+  }
+  .about-text {
+    font-size: 1.25rem;
+  }
+  .quote {
+    font-size: 1.4rem;
+  }
+}

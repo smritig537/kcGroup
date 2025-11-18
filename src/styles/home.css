@@ -1,6 +1,134 @@
+/* src/styles/home.css */
 .hero {
-  min-height:100vh; display:flex; align-items:center; justify-content:center;
-  text-align:center; padding-top:120px; background:#fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 120px;           /* Space for fixed navbar */
+  position: relative;
+  overflow: hidden;
 }
-.hero h1 { font-size:6.8rem; line-height:1; margin-bottom:1rem; }
-.hero p { font-size:1.5rem; color:#444; max-width:900px; margin:2rem auto; }
+
+/* Subtle golden light effect */
+.hero-glow {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(255, 215, 0, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Heading – Golden gradient text */
+.hero h1 {
+  font-size: clamp(4.8rem, 10vw, 8.5rem);
+  line-height: 1;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ffd700, #fff8b8, #ffffff, #fff8b8, #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Tagline */
+.tagline {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #ffffff !important;        /* ← NOW PURE WHITE */
+  margin: 1.5rem 0 2.5rem;
+  font-weight: 500;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);   /* subtle shadow for depth */
+}
+
+.description {
+  font-size: 1.7rem;
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  color: #ffffff !important;        /* ← NOW PURE WHITE */
+  line-height: 1.7;
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-style: italic;
+  text-shadow: 0 2px 15px rgba(0,0,0,0.6);   /* makes white text pop on dark backgrounds */
+}
+
+/* Buttons container */
+.hero-buttons {
+  margin: 4rem 0;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Luxury Gold Button */
+.btn-primary {
+  background: linear-gradient(45deg, #b8971f, #ffd700, #f0d878);
+  color: #000;
+  padding: 1.1rem 2.8rem;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1.1rem;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(255, 215, 0, 0.5);
+  background: linear-gradient(45deg, #ffd700, #fff);
+}
+
+/* Outline Button */
+.btn-outline {
+  border: 2px solid #ffd700;
+  color: #ffd700;
+  background: transparent;
+  padding: 1.1rem 2.8rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1.1rem;
+  transition: all 0.4s ease;
+}
+
+.btn-outline:hover {
+  background: #ffd700;
+  color: #000;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(255, 215, 0, 0.3);
+}
+
+/* Trusted text */
+.trusted {
+  color: #bbbbbb;
+  font-style: italic;
+  font-size: 1.15rem;
+  margin-top: 3rem;
+  opacity: 0.9;
+}
+
+/* Mobile fixes */
+@media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll;
+    padding-top: 100px;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn-outline {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}

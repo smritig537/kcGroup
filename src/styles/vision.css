@@ -1,9 +1,130 @@
-.vision-mission {
-  max-width:900px; margin:0 auto; text-align:center;
+/* src/styles/vision.css */
+.vision-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 140px 1rem 100px;
+  position: relative;
+  color: #ffffff;
+  text-align: center;
 }
-.vision-mission h3 {
-  font-size:2.4rem; margin:3rem 0 1.5rem; color:#000;
+
+.vision-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, 
+    rgba(0,0,0,0.9) 0%, 
+    rgba(0,0,0,0.6) 50%, 
+    rgba(0,0,0,0.9) 100%
+  );
+  z-index: 1;
 }
-.vision-mission p {
-  font-size:1.3rem; color:#444; font-family:'Libre Baskerville', serif;
+
+/* Subtle golden light rays */
+.vision-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(255,215,0,0.18) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255,215,0,0.12) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.vision-content {
+  position: relative;
+  z-index: 10;
+  max-width: 1000px;
+}
+
+.section-title {
+  font-size: clamp(4rem, 9vw, 7rem);
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  margin-bottom: 4rem;
+  line-height: 1;
+}
+
+.gold-text {
+  background: linear-gradient(90deg, #ffd700, #fff8b8, #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.vision-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 3rem;
+  margin: 4rem 0;
+}
+
+.vision-card {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 215, 0, 0.15);
+  transition: all 0.4s ease;
+}
+
+.vision-card:hover {
+  transform: translateY(-12px);
+  border-color: #ffd700;
+  box-shadow: 0 20px 40px rgba(255, 215, 0, 0.15);
+}
+
+.vision-subtitle {
+  font-size: 2.2rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1.5rem;
+  color: #ffd700;
+  letter-spacing: 1px;
+}
+
+.vision-text {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  font-family: 'Libre Baskerville', Georgia, serif;
+}
+
+.highlight {
+  color: #ffd700;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.vision-signature {
+  margin-top: 5rem;
+}
+
+.vision-signature span {
+  font-size: 1.9rem;
+  font-family: 'Dancing Script', cursive;
+  color: #ffffff;
+}
+
+.golden-line {
+  height: 3px;
+  width: 220px;
+  background: linear-gradient(to right, transparent, #ffd700, transparent);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .vision-section {
+    background-attachment: scroll;
+    padding: 120px 1rem;
+  }
+  .vision-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .vision-text {
+    font-size: 1.4rem;
+  }
 }

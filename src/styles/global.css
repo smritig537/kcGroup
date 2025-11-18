@@ -138,3 +138,46 @@ h1, h2, h3, h4, h5 {
   animation: shimmer 3s infinite;
 }
 @keyframes shimmer { 0% { left: -100%; } 100% { left: 100%; } }
+
+
+/* Add this to your global.css or Navbar.css */
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95); /* or your navbar bg */
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.mobile-link {
+  color: white !important;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.mobile-link:hover {
+  color: #dba421; /* gold or your accent color */
+}
+
+.mobile-logo-center {
+  margin-bottom: 2rem;
+}
+
+.mobile-logo {
+  width: 120px;
+  height: auto;
+}

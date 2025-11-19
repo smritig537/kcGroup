@@ -43,7 +43,7 @@ export default function Navbar() {
 
         {/* Mobile Button */}
         <div className="mobile-btn" onClick={() => setMobileOpen(!mobileOpen)}>
-          {mobileOpen ? <X size={32} color="white" /> : <Menu size={32} color="white" />}
+          {mobileOpen ? <X size={32} color="black" /> : <Menu size={32} color="black" />}
         </div>
       </div>
 

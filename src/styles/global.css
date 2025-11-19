@@ -218,12 +218,26 @@ h1, h2, h3, h4, h5 {
 }
 
 /* RESPONSIVE BREAKPOINT */
+/* --- FINAL FIX --- */
+
+/* Force mobile navbar to show */
 @media (max-width: 900px) {
   .nav-links {
-    display: none;
+    display: none !important;
   }
 
   .mobile-btn {
-    display: block;
+    display: block !important;
+    z-index: 999999;
+  }
+
+  .mobile-menu {
+    display: flex !important;
   }
 }
+
+/* Fix mobile menu background */
+.mobile-menu {
+  background: black !important;
+}
+

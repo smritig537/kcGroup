@@ -9,6 +9,7 @@
   text-align: center;
   color: #ffffff;
   overflow: hidden;
+  
 }
 
 /* Dark elegant overlay */
@@ -52,6 +53,7 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+  margin-top: 40px;
 }
 
 .welcome-text {

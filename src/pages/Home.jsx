@@ -25,7 +25,7 @@ export default function Home() {
       {/* Golden glow overlay */}
       <div className="hero-glow" />
 
-      <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+      <div className="container" style={{ position: 'relative', zIndex: 2 , padding:5}}>
         <h1>Khushbu Chauhan</h1>
 
         <p className="tagline">

@@ -11,6 +11,7 @@
   background-attachment: fixed;
   color: #ffffff;
   text-align: center;
+ 
 }
 
 /* Background image from React import (overrides CSS) */
@@ -24,6 +25,7 @@
   background-position: center;
   background-attachment: fixed;
   z-index: -2;
+  
 }
 
 /* Dark elegant overlay */
@@ -56,6 +58,7 @@
   font-weight: 700;
   margin-bottom: 2rem;
   line-height: 1.1;
+  margin-top: 80px;
 }
 
 .gold-text {

@@ -5,7 +5,7 @@ import galleryBg from '../assets/gallery.avif';
 // Import your 5 images
 import img1 from '../assets/kc1.jpeg';
 import img2 from '../assets/kc2.jpeg';
-import img3 from '../assets/kc3.jpeg';
+import img3 from '../assets/Kc3.jpeg';
 import img4 from '../assets/kc4.jpeg';
 import img5 from '../assets/kc5.jpeg';
 

@@ -138,107 +138,206 @@ h1, h2, h3, h4, h5 {
 }
 @keyframes shimmer { 0% { left: -100%; } 100% { left: 100%; } }
 
-/* NAVBAR FIXED CLEAN CODE */
-
-/* Navbar Container */
+/* Navbar base */
 .navbar {
-  position: fixed;
+  background: #fff;           /* adjust to your design */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
-  background: black;
-  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
-  z-index: 9999;
+  z-index: 1000;
 }
 
 .nav-inner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 2rem;
+  justify-content: space-between;
+  padding: 1rem 0;
 }
 
-/* Logo */
-.logo-with-image img {
-  height: 70px;
+/* Logo + Text – Flex */
+.logo-wrapper,
+.mobile-logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: inherit;
 }
 
-/* Desktop Links */
+.navbar-logo {
+  height: 70px;            /* adjust as needed */
+  width: auto;
+}
+
+.logo-text,
+.mobile-logo-text {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000;
+}
+
+/* Desktop links */
 .nav-links {
   display: flex;
   gap: 2rem;
 }
 
 .nav-links a {
-  color: white;
-  font-size: 1rem;
-  font-weight: 500;
   text-decoration: none;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.2s;
 }
 
-.nav-links a.active,
-.nav-links a:hover {
-  color: gold;
+.nav-links a:hover,
+.nav-links a.active {
+  color: #e91e63;          /* your brand color */
 }
 
-/* Mobile Button */
+/* Mobile button */
 .mobile-btn {
   display: none;
+  background: none;
+  border: none;
   cursor: pointer;
-  color: #000;
 }
 
-/* MOBILE MENU */
-.mobile-menu {
+/* Mobile menu overlay */
+.mobile-menu-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: black;
-  z-index: 99999;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.mobile-menu {
+  background: #fff;
+  width: 90%;
+  max-width: 400px;
+  max-height: 90vh;
+  border-radius: 12px;
+  padding: 2rem;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 2rem;
 }
 
 .mobile-logo {
-  width: 120px;
+  height: 150px;
+}
+
+.mobile-links-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  text-align: center;
 }
 
 .mobile-link {
-  color: white;
-  font-size: 1.8rem;
+  font-size: 1.25rem;
+  font-weight: 500;
   text-decoration: none;
+  color: #333;
+  padding: 0.5rem 0;
 }
 
+.mobile-link.active,
 .mobile-link:hover {
-  color: gold;
+  color: #e91e63;
 }
 
-/* RESPONSIVE BREAKPOINT */
-/* --- FINAL FIX --- */
 
-/* Force mobile navbar to show */
-@media (max-width: 900px) {
+/* Hide desktop links & show button on mobile */
+@media (max-width: 768px) {
   .nav-links {
     display: none !important;
   }
-
   .mobile-btn {
-    display: block !important;
-    z-index: 999999;
-  }
-
-  .mobile-menu {
-    display: flex !important;
+    display: block;
   }
 }
 
-/* Fix mobile menu background */
-.mobile-menu {
-  background: black !important;
+/* Mobile Dropdown Menu - Elegant & Inside Navbar */
+.mobile-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.98);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+  padding: 1.8rem 2rem;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-15px);
+  transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 999;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
+.mobile-dropdown.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mobile-dropdown-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.mobile-dropdown-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.15rem;
+  font-weight: 500;
+  position: relative;
+  padding: 0.6rem 0;
+  transition: all 0.3s ease;
+}
+
+.mobile-dropdown-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #ffd700;
+  transition: all 0.4s ease;
+  transform: translateX(-50%);
+}
+
+.mobile-dropdown-links a:hover,
+.mobile-dropdown-links a.active {
+  color: #ffd700;
+}
+
+.mobile-dropdown-links a:hover::after,
+.mobile-dropdown-links a.active::after {
+  width: 70px;
+}
+
+/* Optional: Darker navbar when menu open */
+.navbar.mobile-menu-open {
+  background: rgba(0, 0, 0, 0.98) !important;
+}
+
+/* Hide old full-screen overlay completely */
+.mobile-menu-overlay,
+.mobile-menu,
+.mobile-logo-wrapper,
+.mobile-links-container {
+  display: none !important;
+}

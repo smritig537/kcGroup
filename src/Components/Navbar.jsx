@@ -3,17 +3,16 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import logo from "../assets/logo.png";
-
 import "../styles/global.css";
 
 const navLinks = [
   { name: "Home", path: "/" },
-  { name: "Introduction", path: "/about" },
   { name: "Welcome", path: "/welcome" },
+  { name: "Introduction", path: "/about" },
   { name: "Gallery", path: "/portfolio" },
-  { name: "Services", path: "/services" },
   { name: "Vision & Mission", path: "/vision-mission" },
-  { name: "Contact", path: "/contact" },
+  { name: "Business Services", path: "/services" },
+  { name: "Contact Us", path: "/contact" },
 ];
 
 export default function Navbar() {
@@ -21,14 +20,15 @@ export default function Navbar() {
   const location = useLocation();
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${mobileOpen ? "mobile-menu-open" : ""}`}>
       <div className="container nav-inner">
-        {/* Logo */}
-        <Link to="/" className="logo-with-image">
-          <img src={logo} alt="Logo" className="navbar-logo" />
+        {/* Logo + Name */}
+        <Link to="/" className="logo-wrapper">
+          <img src={logo} alt="Khushbu Chauhan" className="navbar-logo" />
+          <h5 className="logo-text">Khushbu Chauhan</h5>
         </Link>
 
-        {/* Desktop Menu */}
+        {/* Desktop Links */}
         <div className="nav-links">
           {navLinks.map((link) => (
             <Link
@@ -41,29 +41,35 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Mobile Button */}
-        <div className="mobile-btn" onClick={() => setMobileOpen(!mobileOpen)}>
-          {mobileOpen ? <X size={32} color="black" /> : <Menu size={32} color="black" />}
-        </div>
+        {/* Mobile Menu Button - Gold Icon */}
+        <button
+          className="mobile-btn"
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label="Toggle menu"
+        >
+          {mobileOpen ? (
+            <X size={32} color="#e5d669ff" strokeWidth={2.5} />
+          ) : (
+            <Menu size={32} color="#0a0901ff" strokeWidth={2.5} />
+          )}
+        </button>
       </div>
 
-      {/* Mobile Menu */}
-      {mobileOpen && (
-        <div className="mobile-menu">
-          <img src={logo} alt="Logo" className="mobile-logo" />
-
+      {/* Dropdown Mobile Menu - Slides Down Inside Navbar */}
+      <div className={`mobile-dropdown ${mobileOpen ? "open" : ""}`}>
+        <div className="mobile-dropdown-links">
           {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
-              className="mobile-link"
+              className={location.pathname === link.path ? "active" : ""}
               onClick={() => setMobileOpen(false)}
             >
               {link.name}
             </Link>
           ))}
         </div>
-      )}
+      </div>
     </nav>
   );
 }

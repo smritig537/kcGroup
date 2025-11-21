@@ -33,16 +33,15 @@ export default function Home() {
         </p>
 
         <p className="description" style={{}}>
-          Crafting timeless identities for visionary brands, luxury hotels,
-          and exceptional individuals.
+          Turning ideas into distinctive identities that build trust, influence, and recognition.
         </p>
 
         <div className="hero-buttons">
-          <a href="/portfolio" className="btn btn-primary">
-            View Portfolio
-          </a>
           <a href="/contact" className="btn btn-primary">
-            Begin Your Journey
+           Get In Touch
+          </a>
+          <a href="/services" className="btn btn-primary">
+            Business Services
           </a>
         </div>
 

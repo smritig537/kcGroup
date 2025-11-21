@@ -1,11 +1,12 @@
 // src/pages/Welcome.jsx
 import '../styles/global.css';
 import '../styles/welcome.css';
-import welcomeBg from '../assets/welcome .avif'; // ← Your background image
+import welcomeBg from '../assets/kc2.jpeg'; 
+import welcomeSideImg from '../assets/kc1.jpeg'; // ← Add a new image
 
 export default function Welcome() {
   return (
-    <section 
+    <section
       className="welcome-section"
       style={{
         backgroundImage: `
@@ -20,11 +21,10 @@ export default function Welcome() {
     >
       <div className="welcome-overlay" />
 
-      <div className="container">
+      <div className="container welcome-flex">
+        {/* Left Side Content */}
         <div className="welcome-content">
-          <h2 className="section-title">
-            Welcome
-          </h2>
+          <h2 className="section-title">Welcome</h2>
 
           <p className="welcome-text">
             You’ve found a space dedicated to timeless design,<br />
@@ -40,6 +40,15 @@ export default function Welcome() {
             <span>— Khushbu Chauhan</span>
             <div className="golden-line"></div>
           </div>
+        </div>
+
+        {/* Right Side Image */}
+        <div className="welcome-image-wrapper">
+          <img 
+            src={welcomeSideImg} 
+            alt="Welcome" 
+            className="welcome-side-image"
+          />
         </div>
       </div>
     </section>

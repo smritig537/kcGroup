@@ -5,17 +5,32 @@ import visionBg from '../assets/services.avif'; // ← Reusing your powerful ima
 import { Link } from 'react-router-dom';
 
 export default function Services() {
-  const services = [
-    "CA & Taxation",
-    "Legal Services",
-    "Financial Advisory",
-    "Estate Development",
-    "Film Production",
-    "Real Estate Development",
-    "Luxury Travel & Visa",
-    "Celebrity Management",
-    "Digital Media & PR",
-  ];
+const services = [
+  "CA & Taxation",
+  "Legal Services",
+  "Financial Advisory",
+  "Estate Development",
+  "Film Production",
+  "Real Estate Development",
+  "Luxury Travel & Visa",
+  "Celebrity Management",
+  "Digital Media & PR",
+
+  // Added items
+  "Financial",
+  "Legal Firm",
+  "CA Firm",
+  "Film Production",
+  "Political",
+  "Travel & Visa",
+  "Celebrities Endorsement",
+  "Real Estate",
+  "Business Consulting",
+  "HR & Recruitment",
+  "Corporate Event Management",
+  "Cruise & Luxury Travel",
+];
+
 
   return (
     <section 

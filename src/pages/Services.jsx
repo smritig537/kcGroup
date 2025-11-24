@@ -49,10 +49,7 @@ export default function Services() {
           ))}
         </div>
 
-        <div className="services-cta">
-          <p>Ready to elevate your brand?</p>
-          <Link href="/contact" className="btn-gold">Begin Your Journey</Link>
-        </div>
+       
       </div>
     </section>
   );

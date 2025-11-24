@@ -2,7 +2,7 @@
 import '../styles/global.css';
 import '../styles/welcome.css';
 import welcomeBg from '../assets/kc2.jpeg'; 
-import welcomeSideImg from '../assets/kc1.jpeg'; // ← Add a new image
+import welcomeSideImg from '../assets/kc6.jpeg'; // ← Add a new image
 
 export default function Welcome() {
   return (

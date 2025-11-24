@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 export default function Services() {
   const services = [
     "CA & Taxation",
-    "CLegal Services",
+    "Legal Services",
     "Financial Advisory",
     "Estate Development",
     "Film Production",

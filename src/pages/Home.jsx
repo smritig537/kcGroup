@@ -7,6 +7,7 @@ import Services from './Services';
 import Vission from './Vission';
 import Welcome from './Welcome';
 import { Link } from 'react-router-dom';
+import Portfolio from './Portfolio';
 export default function Home() {
   return (
     <>
@@ -49,6 +50,7 @@ export default function Home() {
     </section>
     <About/>
     <Welcome/>
+    <Portfolio/>
     <Services/>
     <Vission/>
     

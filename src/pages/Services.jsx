@@ -5,12 +5,15 @@ import visionBg from '../assets/services.avif'; // ← Reusing your powerful ima
 
 export default function Services() {
   const services = [
-    "Brand Identity Design",
-    "Creative Direction",
-    "UI/UX & Web Design",
-    "Luxury Photography",
-    "Digital Strategy",
-    "Visual Storytelling"
+    "CA & Taxation",
+    "CLegal Services",
+    "Financial Advisory",
+    "Estate Development",
+    "Film Production",
+    "Real Estate Development",
+    "Luxury Travel & Visa",
+    "Celebrity Management",
+    "Digital Media & PR",
   ];
 
   return (

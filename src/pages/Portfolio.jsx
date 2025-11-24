@@ -9,6 +9,8 @@ import img2 from '../assets/kc2.jpeg';
 import img3 from '../assets/Kc3.jpeg';
 import img4 from '../assets/kc4.jpeg';
 import img5 from '../assets/kc5.jpeg';
+import img6 from '../assets/kc6.jpeg';
+import img7 from '../assets/kc7.jpeg';
 
 // // New gallery images
 // import kh1 from '../assets/khushbu1.jpg';
@@ -30,7 +32,7 @@ export default function Portfolio() {
 
   const galleryImages = [
     img1, img2, img3, img4, img5,
-    img1, img2, img3, img4, img5,
+    img1, img2, img3, img4, img6,img7
   ];
 
   return (

@@ -38,17 +38,20 @@ export default function About() {
           </h2>
 
           <div className="about-text">
-            <p>
-              With over <strong>8 years</strong> in luxury branding and creative direction, 
-              I help visionary brands and individuals create elegant, authentic, 
-              and enduring identities.
-            </p>
+  <p>
+    With over <strong>6 years</strong> of experience in strategic consultancy and brand
+    transformation, I help businesses, leaders, and emerging ventures discover their true
+    potential and build identities that are clear, impactful, and future-ready.
+  </p>
 
-            <p>
-              From crafting iconic campaigns to shaping minimalist digital experiences 
-              for global fashion houses — every project is guided by intention, sophistication, 
-              and timeless elegance.
-            </p>
+  <p>
+    My work spans communication strategy, digital presence, and creative
+    direction — blending analytical precision with refined aesthetics. Every project is
+    guided by insight, intention, and a commitment to delivering solutions that elevate
+    brands, strengthen market positioning, and create lasting value.
+  </p>
+
+
 
             <p className="quote">"My work. My voice. My story."</p>
           </div>

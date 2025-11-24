@@ -26,15 +26,18 @@ export default function Welcome() {
         <div className="welcome-content">
           <h2 className="section-title">Welcome</h2>
 
-          <p className="welcome-text">
-            You’ve found a space dedicated to timeless design,<br />
-            thoughtful creativity, and meaningful collaboration.
-            <br /><br />
-            Take your time. Explore the work.<br />
-            <span className="gold-highlight">
-              Let’s create something beautiful together.
-            </span>
-          </p>
+         <p className="welcome-text">
+  Led by our visionary <strong>Managing Director, Ms. Khushbu Chauhan</strong>, we
+  bring a legacy of multi-industry excellence — spanning Finance, Real Estate,
+  Entertainment, Travel, Media, and Strategic Consulting.<br /><br />
+  With strategic leadership and a growth-driven mindset, we continue to expand
+  horizons, build powerful collaborations, and create long-lasting impact
+  through meaningful partnerships.<br /><br />
+  <span className="gold-highlight">
+    Together, let’s shape opportunities that inspire and elevate.
+  </span>
+</p>
+
 
           <div className="welcome-signature">
             <span>— Khushbu Chauhan</span>

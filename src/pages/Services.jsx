@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import '../styles/services.css';
 import visionBg from '../assets/services.avif'; // ← Reusing your powerful image
+import { Link } from 'react-router-dom';
 
 export default function Services() {
   const services = [
@@ -34,7 +35,7 @@ export default function Services() {
 
       <div className="container">
         <h2 className="section-title">
-          Services
+          Business Services
         </h2>
 
         <div className="services-grid">
@@ -50,7 +51,7 @@ export default function Services() {
 
         <div className="services-cta">
           <p>Ready to elevate your brand?</p>
-          <a href="/contact" className="btn-gold">Begin Your Journey</a>
+          <Link href="/contact" className="btn-gold">Begin Your Journey</Link>
         </div>
       </div>
     </section>

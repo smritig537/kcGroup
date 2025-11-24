@@ -104,3 +104,138 @@
     font-size: 1.6rem;
   }
 }
+
+
+/* ============================
+   Welcome Section
+============================ */
+.welcome-section {
+  position: relative;
+  min-height: 100vh;
+  padding: 140px 0 100px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.welcome-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+
+.welcome-flex {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+/* ============================
+   Left Content
+============================ */
+.welcome-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.welcome-text {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #e6e6e6;
+  margin-top: 20px;
+}
+
+.gold-highlight {
+  color: #d4a248;
+  font-weight: 600;
+}
+
+.welcome-signature {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.welcome-signature span {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.golden-line {
+  height: 2px;
+  width: 60px;
+  background: #d4a248;
+}
+
+/* ============================
+   Right Image
+============================ */
+.welcome-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.welcome-side-image {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0px 0px 25px rgba(0,0,0,0.4);
+}
+
+
+/* ============================
+   RESPONSIVE DESIGN
+============================ */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .welcome-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .welcome-content {
+    max-width: 100%;
+  }
+
+  .welcome-side-image {
+    max-width: 350px;
+    margin-top: 30px;
+  }
+
+  .welcome-signature {
+    justify-content: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .welcome-section {
+    padding: 110px 20px 80px;
+  }
+
+  .welcome-text {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .section-title {
+    font-size: 30px !important;
+  }
+
+  .welcome-side-image {
+    max-width: 280px;
+    border-radius: 15px;
+  }
+
+  .welcome-signature span {
+    font-size: 16px;
+  }
+}

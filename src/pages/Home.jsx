@@ -6,6 +6,7 @@ import About from '../pages/About';
 import Services from './Services';
 import Vission from './Vission';
 import Welcome from './Welcome';
+import { Link } from 'react-router-dom';
 export default function Home() {
   return (
     <>
@@ -37,12 +38,8 @@ export default function Home() {
         </p>
 
         <div className="hero-buttons">
-          <a href="/contact" className="btn btn-primary">
-           Get In Touch
-          </a>
-          <a href="/services" className="btn btn-primary">
-            Business Services
-          </a>
+          <Link to="/contact" className="btn btn-primary">Get In Touch</Link>
+          <Link to="/services" className="btn btn-primary">Business Services</Link>
         </div>
 
         <p className="trusted">
